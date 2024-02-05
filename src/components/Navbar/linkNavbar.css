@@ -1,0 +1,12 @@
+.collection,.products{
+    display: none;
+}
+.collection-nav{
+    transition: 0.5s;
+}
+.collection-nav:hover .collection{
+    display: block;
+}
+.products-nav:hover .products{
+    display: block;
+}

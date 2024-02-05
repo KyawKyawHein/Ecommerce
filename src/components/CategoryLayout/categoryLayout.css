@@ -1,0 +1,9 @@
+.category-layout{
+    overflow: hidden;
+}
+.layout-img{
+    transition: 2s;
+}
+.category-layout:hover .layout-img{
+    transform: scale(1.1);
+}
