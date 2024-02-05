@@ -1,12 +1,13 @@
 import React from 'react'
 import Layout from './Layout'
-import { CarouselSlide, CategoryLayout } from '../components'
+import { CarouselSlide, CategoryLayout, Trending } from '../components'
 
 const Home = () => {
   return (
     <Layout>
         <CarouselSlide/>
         <CategoryLayout/>
+        <Trending/>
     </Layout>
   )
 }
