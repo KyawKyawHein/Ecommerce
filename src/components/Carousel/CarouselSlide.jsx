@@ -2,6 +2,7 @@ import React from 'react'
 import { Carousel } from 'flowbite-react';
 import "./carouselSlide.css"
 import { Carousel1,Carousel2, Carousel3 } from '../../assets';
+import { Link } from 'react-router-dom';
 
 export default function CarouselSlide() {
   return (
@@ -14,7 +15,7 @@ export default function CarouselSlide() {
               <h4 className="uppercase text-2xl text-5xl my-3 font-semibold">find your</h4>
               <h2 className="uppercase text-3xl text-8xl">perfect</h2>
               <p className="my-5 font-extrabold">Uncomprosing in style, quality and performance</p>
-              <button className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</button>
+              <Link to={"/products"} className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</Link>
            </div>
           </div>
           <div className="relative">
@@ -24,7 +25,7 @@ export default function CarouselSlide() {
               <h4 className="uppercase text-2xl text-5xl my-3 font-semibold">fashion</h4>
               <h2 className="uppercase text-3xl text-8xl">trending</h2>
               <p className="my-5 font-extrabold">Uncomprosing in style, quality and performance</p>
-              <button className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</button>
+              <Link to={'/products'} className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</Link>
            </div>
           </div>
           <div className="relative">
@@ -34,7 +35,7 @@ export default function CarouselSlide() {
               <h4 className="uppercase text-2xl text-5xl my-3 font-semibold">wearing</h4>
               <h2 className="uppercase text-3xl text-8xl">minimalist</h2>
               <p className="my-5 font-extrabold">Uncomprosing in style, quality and performance</p>
-              <button className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</button>
+              <Link to={'/products'} className='my-5 uppercase px-10 py-4 bg-white text-black'>Shop Now</Link>
            </div>
           </div>
         </Carousel>
