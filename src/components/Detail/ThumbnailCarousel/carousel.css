@@ -1,0 +1,6 @@
+.main-carousel,.thumbnail-carousel{
+    padding: 10px;
+}
+.main-carousel-img{
+    width: 100% !important;
+}

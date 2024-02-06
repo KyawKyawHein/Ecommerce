@@ -1,11 +1,12 @@
 import React from 'react'
 import "./linkNavbar.css"
+import { Link } from 'react-router-dom'
 
 const LinkNavbar = () => {
   return (
     <>
     <ul className='p-5 flex gap-10 justify-center items-center font-semibold text-sm relative border border-b-2'>
-        <li className='cursor-pointer home uppercase'>Home</li>
+        <li className='cursor-pointer home uppercase'><Link to={'/'}>Home</Link></li>
         <li className='cursor-pointer collection-nav'>
           <p className='uppercase'>Collection</p>
           <div className="collection absolute z-30 bg-white bottom-[-220px] w-full left-0 right-0">

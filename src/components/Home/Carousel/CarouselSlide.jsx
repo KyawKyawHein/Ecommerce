@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from 'flowbite-react';
 import "./carouselSlide.css"
-import { Carousel1,Carousel2, Carousel3 } from '../../assets';
+import { Carousel1,Carousel2, Carousel3 } from '../../../assets';
 import { Link } from 'react-router-dom';
 
 export default function CarouselSlide() {

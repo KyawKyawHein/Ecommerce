@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hoodie, Jacket, ManPhoto, WomanLightWeight, WomanPhoto } from '../../assets'
+import { Hoodie, Jacket, ManPhoto, WomanLightWeight, WomanPhoto } from '../../../assets'
 import "./categoryLayout.css"
 
 export default function CategoryLayout() {
@@ -21,7 +21,7 @@ export default function CategoryLayout() {
             </div>
         </div>
       </div>
-      <div className="mt-3 block md:flex gap-3">
+      {/* <div className="mt-3 block md:flex gap-3">
         <div className="relative category-layout">
             <img src={WomanLightWeight} className='layout-img' />
             <div className="absolute bottom-14 left-[40%] text-white">
@@ -43,7 +43,7 @@ export default function CategoryLayout() {
                 <button className='bg-white font-semibold p-2 md:py-3 md:px-8 text-black'>Shop now</button>
             </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
