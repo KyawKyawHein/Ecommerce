@@ -16,11 +16,16 @@ export default function Products() {
     <Layout>
       <div className="flex justify-center">
         <div className="w-full md:w-[1300px] md:mt-20 flex gap-4 md:gap-10">
-          <div className="categories-list w-full md:w-[400px] bg-orange-500">
-            <div className="flex gap-2">
+          <div className="categories-list w-full md:w-[400px]">
+            <div className=" flex gap-2 items-center">
                 <FontAwesomeIcon icon={faBars} />
-                <h1>Categories</h1>
+                <h1 className="font-extrabold text-2xl uppercase">Categories</h1>
             </div>
+            <ul className="mt-5">
+                <li className="bg-gray-200 p-3 md:px-8 mb-2">Flash Deals</li>
+                <li className="bg-gray-200 p-3 md:px-8 mb-2">Women</li>
+                <li className="bg-gray-200 p-3 md:px-8 mb-2">Men</li>
+            </ul>
           </div>
           <ShowProducts products={womanProducts} />
         </div>

@@ -1,0 +1,9 @@
+.quick-add-btn{
+    /* display: none; */
+    bottom: -80px;
+    transition: 0.5s;
+}
+.product-item:hover .quick-add-btn{
+    display: block;
+    bottom: 30px;
+}

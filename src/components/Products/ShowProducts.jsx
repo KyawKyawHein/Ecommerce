@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faGripLines, faGripVertical } from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion"
+import "./showProducts.css"
 
 export default function Products({products}) {
   console.log(products);
@@ -43,14 +44,17 @@ export default function Products({products}) {
           <FontAwesomeIcon icon={faGripLines} />
         </button>
       </div>
-      <motion.div layout     initial={{ opacity: 0, scale: 0.5 }}
+      <motion.div layout initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
- className={`${viewThree && 'md:grid grid-cols-3'} ${viewTwo && 'md:grid grid-cols-2'} ${listView && 'block'} md:gap-4`}>
+    className={`${viewThree && 'md:grid grid-cols-3'} ${viewTwo && 'md:grid grid-cols-2'} ${listView && 'block'} md:gap-4`}>
           {
             products?.map((product)=>(
-              <div className={`border p-3 ${listView && 'flex gap-10'}`} key={product.id}>
-                <img src={product.image} className={`w-full ${viewThree && 'md:h-[250px]'} ${viewTwo && 'md:h-[400px]'} ${listView && 'md:w-[200px] md:h-[250px]'}`} alt="" />
+              <div className={`product-item border p-3 ${listView && 'flex gap-10'}`} key={product.id}>
+                <div className='relative'>
+                  <img src={product.image} className={` w-full ${viewThree && 'md:h-[250px]'} ${viewTwo && 'md:h-[340px]'} ${listView && 'md:w-[200px] md:h-[250px]'}`} alt="" />
+                  <button className='quick-add-btn absolute left-0 bg-black text-white w-full md:w-[250px] md:left-5 p-3 rounded hover:bg-orange-500'>Quick Add</button>
+                </div>
                 <div>
                   <h4 className="my-3 font-bold">{product.title}</h4>
                   <p className="">${product.price}</p>
