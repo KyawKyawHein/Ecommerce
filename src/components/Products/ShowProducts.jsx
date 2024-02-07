@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faGripLines, faGripVertical } from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion"
-import "./showProducts.css"
+import SingleProduct from '../SingleProduct/SingleProduct';
 
 export default function Products({products}) {
   const [viewThree,setViewThree] = useState(true)
@@ -54,19 +54,7 @@ export default function Products({products}) {
     className={`${viewThree && 'md:grid grid-cols-3'} ${viewTwo && 'md:grid grid-cols-2'} ${listView && 'block'} md:gap-4`}>
           {
             products?.map((product)=>(
-              <div className={`product-item border px-2 rounded ${listView && 'flex gap-10 p-2'}`} key={product.id}>
-                <div className='relative flex items-center justify-center'>
-                  <img src={product.image} className={`w-full ${viewThree && 'md:h-[300px] md:w-[300px]'} ${viewTwo && 'md:h-[340px] md:w-[340px]'} ${listView && 'md:w-[400px] md:h-[200px]'}`} alt="" />
-                  <button className={`quick-add-btn z-0 absolute left-0 right-0 bg-black  text-white w-full w-full m-auto p-3 rounded hover:bg-orange-500 ${viewThree | viewTwo ?'md:bottom-[-90px]':'md:bottom-[30px] hidden'}`}>Quick Add</button>
-                </div>
-                <div className='z-20 relative p-3 bg-white'>
-                  <h4 className="my-3 font-bold">{product.title}</h4>
-                  <p className="">${product.price}</p>
-                  {
-                    listView && <p className="my-5">{product.description}</p>
-                  }
-                </div>
-              </div>
+              <SingleProduct key={product.id} {...product} viewThree={viewThree} viewTwo={viewTwo} listView={listView} />
             ))
           }
       </motion.div>

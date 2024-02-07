@@ -6,3 +6,5 @@ export {default as Footer} from "./Footer/Footer.jsx";
 export {default as ShowProducts} from "./Products/ShowProducts.jsx";
 export {default as MainCarousel} from "./Detail/ThumbnailCarousel/MainCarousel.jsx";
 export {default as ThumbnailCarousel} from "./Detail/ThumbnailCarousel/ThumbnailCarousel.jsx";
+export {default as ProductDetail} from "./Detail/ProductDetail/ProductDetail.jsx";
+export {default as RelatedProducts} from "./Detail/RelatedProducts/RelatedProducts.jsx";

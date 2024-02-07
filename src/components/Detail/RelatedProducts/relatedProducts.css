@@ -1,0 +1,6 @@
+.slick-prev,
+.slick-next {
+    display: block !important;
+    color: black !important;
+    background-color: black;
+}
