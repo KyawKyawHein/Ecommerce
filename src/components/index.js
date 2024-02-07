@@ -8,3 +8,4 @@ export {default as MainCarousel} from "./Detail/ThumbnailCarousel/MainCarousel.j
 export {default as ThumbnailCarousel} from "./Detail/ThumbnailCarousel/ThumbnailCarousel.jsx";
 export {default as ProductDetail} from "./Detail/ProductDetail/ProductDetail.jsx";
 export {default as RelatedProducts} from "./Detail/RelatedProducts/RelatedProducts.jsx";
+export {default as Loader} from "./AdminDashboard/Loader.jsx";

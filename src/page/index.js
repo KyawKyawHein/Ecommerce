@@ -1,3 +1,5 @@
 export {default as Home} from "./Home.jsx"
 export {default as Products} from "./Products.jsx"
 export {default as Detail} from "./Detail.jsx"
+export {default as AdminDashboard} from "./AdminDashboard/AdminDashboard.jsx"
+export {default as AdminProducts} from "./AdminDashboard/Products/AdminProducts.jsx"
