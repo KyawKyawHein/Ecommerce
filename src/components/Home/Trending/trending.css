@@ -1,21 +1,21 @@
-.splide__slide img {
+/* .splide__slide img {
     width: 200px;
     height: auto;
-  }
+  } */
   
-.product-container{
+/* .product-container{
     z-index: -1;
     transition: 1s;
-}
+} */
 .slick-prev,
 .slick-next {
     display: none !important;
 }
-.product-slider-container {
+/* .product-slider-container {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-}
+} */
 
 .custom-arrow.prev {
   left: 10px;

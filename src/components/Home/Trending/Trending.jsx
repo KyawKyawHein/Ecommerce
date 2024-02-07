@@ -10,7 +10,7 @@ const Trending = ({products,title}) => {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
   };
   let slider;
   const goToPrev = () => {
