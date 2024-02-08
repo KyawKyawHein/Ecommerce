@@ -9,3 +9,5 @@ export {default as ThumbnailCarousel} from "./Detail/ThumbnailCarousel/Thumbnail
 export {default as ProductDetail} from "./Detail/ProductDetail/ProductDetail.jsx";
 export {default as RelatedProducts} from "./Detail/RelatedProducts/RelatedProducts.jsx";
 export {default as Loader} from "./AdminDashboard/Loader.jsx";
+export {default as ToastifyAlert} from "./core/ToastifyAlert.jsx";
+export {default as Loading} from "./Loading.jsx";

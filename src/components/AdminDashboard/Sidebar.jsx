@@ -14,16 +14,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
   const storedSidebarExpanded = localStorage.getItem('sidebar-expanded');
   const [sidebarExpanded, setSidebarExpanded] = useState(
     storedSidebarExpanded === null ? false : storedSidebarExpanded === 'true'
-  );
-
-    useEffect(() => {
-        // localStorage.setItem('sidebar-expanded', sidebarExpanded.toString());
-        // if (sidebarExpanded) {
-        //   document.querySelector('body')?.classList.add('sidebar-expanded');
-        // } else {
-        //   document.querySelector('body')?.classList.remove('sidebar-expanded');
-        // }
-    }, [sidebarExpanded]);    
+  );  
 
   return (
     <aside
@@ -107,7 +98,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                 <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
                                     <li>
                                         <NavLink
-                                            to="/admin/dashboard/products"
+                                            to="/admin/dashboard/product"
                                             className={({ isActive }) =>
                                             'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                             (isActive && '!text-white')
@@ -171,7 +162,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                 <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
                                     <li>
                                         <NavLink
-                                            to="/"
+                                            to="/admin/dashboard/category"
                                             className={({ isActive }) =>
                                             'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                             (isActive && '!text-white')
@@ -182,7 +173,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                     </li>
                                     <li>
                                         <NavLink
-                                            to="/"
+                                            to="/admin/dashboard/category/add"
                                             className={({ isActive }) =>
                                             'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                             (isActive && '!text-white')
@@ -234,7 +225,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                 <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
                                     <li>
                                         <NavLink
-                                            to="/"
+                                            to="/admin/dashboard/banner"
                                             className={({ isActive }) =>
                                             'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                             (isActive && '!text-white')
@@ -245,7 +236,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                     </li>
                                     <li>
                                         <NavLink
-                                            to="/"
+                                            to="/admin/dashboard/banner/add"
                                             className={({ isActive }) =>
                                             'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                             (isActive && '!text-white')
