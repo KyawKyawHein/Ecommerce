@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink,useLocation } from 'react-router-dom';
+import { Link, NavLink,useLocation } from 'react-router-dom';
 import Logo from "../../assets/logo-icon.svg"
 import SidebarLinkGroup from './SidebarLinkGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -62,6 +62,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
             MENU
           </h3>
             <ul className="mb-6 flex flex-col gap-2">
+                <li><Link to={'/admin/dashboard'}>Dashboard</Link></li>
                 {/* products  */}
                 <SidebarLinkGroup
                     activeCondition={
@@ -73,7 +74,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                         <React.Fragment>
                             <NavLink
                             to="#"
-                            className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                            className={`group relative flex items-center gap-2.5 rounded-sm  py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                                 (pathname === '/product' ||
                                 pathname.includes('product')) &&
                                 'bg-graydark dark:bg-meta-4'
@@ -95,7 +96,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                     !open && 'hidden'
                                 }`}
                             >
-                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
+                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 ">
                                     <li>
                                         <NavLink
                                             to="/admin/dashboard/product"
@@ -137,7 +138,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                         <React.Fragment>
                             <NavLink
                             to="#"
-                            className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                            className={`group relative flex items-center gap-2.5 rounded-sm py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                                 (pathname === '/category' ||
                                 pathname.includes('category')) &&
                                 'bg-graydark dark:bg-meta-4'
@@ -159,7 +160,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                     !open && 'hidden'
                                 }`}
                             >
-                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
+                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 ">
                                     <li>
                                         <NavLink
                                             to="/admin/dashboard/category"
@@ -201,7 +202,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                         <React.Fragment>
                             <NavLink
                             to="#"
-                            className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                            className={`group relative flex items-center gap-2.5 rounded-sm py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                                 pathname.includes('banner') &&
                                 'bg-graydark dark:bg-meta-4'
                             }`}
@@ -222,7 +223,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
                                     !open && 'hidden'
                                 }`}
                             >
-                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 pl-5">
+                                <ul className="mt-2 mb-5.5 flex flex-col gap-2.5 ">
                                     <li>
                                         <NavLink
                                             to="/admin/dashboard/banner"

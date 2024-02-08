@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import Layout from './Layout'
 import { CarouselSlide, CategoryLayout, Trending } from '../components'
-import axios from 'axios';
 import Products from '../components/Products/ShowProducts';
+import axiosClient from '../axiosClient';
 
 const Home = () => {
-  const [womanProducts,setWomanProducts] = useState();
+  const [products,setProducts] = useState();
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then(({ data }) => {
-      setWomanProducts(data);
+    axiosClient.get("/products").then(({ data }) => {
+      setProducts(data.data);
     });
   }, []);
   return (
     <Layout>
         <CarouselSlide/>
         <CategoryLayout/>
-        <Trending products={womanProducts} title={"WOMEN'S TRENDING"}/>
-        <Trending products={womanProducts} title={"MEN'S TRENDING"}/>
+        <Trending products={products} title={"WOMEN'S TRENDING"}/>
+        <Trending products={products} title={"MEN'S TRENDING"}/>
         <div className="flex justify-center">
           <div className="w-full md:w-[1400px]">
-           <Products products={womanProducts}  />
+           <Products products={products}  />
           </div>
         </div>
     </Layout>

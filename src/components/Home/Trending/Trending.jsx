@@ -73,7 +73,7 @@ const Trending = ({products,title}) => {
           {products?.map((product) => (
             <div key={product.id} className="p-2 w-full border">
               <img src={product.image} className="w-full h-[250px]" alt="" />
-              <h4 className="font-semibold">{product.title.length >30 ? product.title.slice(0,30)+'...': product.title}</h4>
+              <h4 className="font-semibold">{product.name.length >30 ? product.name.slice(0,30)+'...': product.name}</h4>
               <p className="mt-3">${product.price}</p>
             </div>
           ))}
